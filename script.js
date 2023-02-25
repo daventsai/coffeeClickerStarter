@@ -149,6 +149,9 @@ function buyButtonClick(event, data) {
       renderProducers(data);
       updateCoffeeView(data.coffee);
       updateCPSView(data.totalCPS);
+      const cps = document.querySelector('.cps-container');
+      cps.classList.add('animate');
+      setTimeout(()=>{cps.classList.remove('animate')},500)
     }
   }
 }
